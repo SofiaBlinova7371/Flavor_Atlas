@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 spiceDiv.appendChild(plantType);
 
                 const img = document.createElement('img');
-                img.src = `/Images/spice/${spice["Spice name"]}.jpeg`;
+                img.src = `Images/spice/${spice["Spice name"]}.jpeg`;
                 img.alt = spice["Spice name"];
                 spiceDiv.appendChild(img);
 
