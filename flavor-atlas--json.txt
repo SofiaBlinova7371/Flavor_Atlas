@@ -837,28 +837,6 @@
       "Additional Notes": "With a deep earthy flavor, black mustard seeds are commonly tempered in oil, releasing an intense, spicy aroma. In many cuisines, they serve as the foundational spice, infusing oils with boldness."
     },
     {
-      "Spice name": "Fennel Pollen",
-      "Transcription": "/ˈfɛn.əl ˈpɑː.lən/",
-      "Plant Part": "Seeds",
-      "Plant Family": "Apiaceae",
-      "Location": "Mediterranean",
-      "Harverst Time - Start": "June",
-      "Harverst Time - End": "August",
-      "Price": 45,
-      "Common use": "Culinary",
-      "Aroma": "Sweet, Herbal",
-      "Flavor": "Intense, Licorice-like",
-      "Sweetness": 5,
-      "Spiciness": 1,
-      "Bitterness": 1,
-      "Citrus": 2,
-      "Earthiness": 1,
-      "Florality": 3,
-      "Herbality": 9,
-      "Pungency": 1,
-      "Additional Notes": "Fennel pollen is an aromatic ingredient beloved in Mediterranean and Italian cooking, often called the “spice of angels” for its intense sweet and herbal fragrance. It’s prized for enhancing flavors, with just a small pinch adding a burst of licorice-like sweetness to meats, vegetables, and sauces. Fennel pollen is delicate, expensive, and harvested by hand, making it a sought-after gourmet spice."
-    },
-    {
       "Spice name": "Grains of Paradise",
       "Transcription": "/ɡreɪnz əv ˈpɛr.ə.daɪs/",
       "Plant Part": "Seeds",
