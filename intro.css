@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+#intro-screen {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+p {
+    font-family: "itc-american-typewriter", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #FBF4EC;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+#text-container {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+#intro-text {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#tap-text {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.4s;
+    font-size: 1.2rem;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#spectrum-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBF4EC;
+    z-index: 9999;
+    animation: slide-in 0.8s ease forwards;
+}
+
+
+.logo_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.logo_container.show {
+    opacity: 1; /* Fade in */
+    visibility: visible;
+}
+
+.logo_container #right_line,
+.logo_container #left_line {
+    background-color: #FBF4EC;
+    height: 1px;
+    width: 0; /* Start with no width */
+    transition: width 1s ease; /* Smooth expansion */
+}
+
+.logo_container.show #right_line {
+    width: 50%; /* Expand from the right to center */
+    animation: slide-in-right 1s ease forwards;
+}
+
+.logo_container.show #left_line {
+    width: 50%; /* Expand from the left to center */
+    animation: slide-in-left 1s ease forwards;
+}
+
+.logo_container video {
+    width: 20vw;
+    display: block;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in */
+    animation: fade-in-video 1.5s ease 1s forwards; /* Delay for lines animation */
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-video {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+
+    html {
+        font-size: 95%;
+    }
+
+    #text-container {
+        width: 80vw; /* Set width for mobile */
+        top: 40vh; /* Adjust positioning */
+    }
+
+    #intro-text {
+        width: 80vw; /* Match container width */
+    }
+
+    .logo_container video {
+        width: 80vw; /* Match video width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+

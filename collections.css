@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    animation: fade-in 2s ease;
+}
+
+html {
+    background-color: #FBF4EC;
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: "quiche-display", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-family: "itc-american-typewriter", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-family: "itc-american-typewriter", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+
+p {
+    font-family: "itc-american-typewriter", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6rem;
+}
+
+.menu {
+    height: 7rem;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 60vw;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+#spectrum, #collections {
+    border-left: 1px solid black;
+    width: 19vw;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+#spectrum>a, #collections>a, #logo>a {
+    padding-left: 3rem;
+}
+
+.body {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    box-sizing: border-box;
+}
+
+.card_collection {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 6% 3%;
+    box-sizing: border-box;
+}
+
+.title, .description {
+    width: 94%;
+}
+
+.card_collection>img {
+    width: 94%;
+    height: 50vh;
+    object-fit: cover; 
+}
+
+.image {
+    width: 94%;
+    height: 50vh;
+    position: relative;
+}
+
+.image>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.over {
+    transition: 0.5s;
+}
+
+.over:hover {
+    opacity: 0;
+}
+
+.additional_info {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line_divider {
+    width: 94%;
+    border-top: 1px dashed black; /* Dashed line */
+    border-image: repeating-linear-gradient(to right, black 0, black 16px, transparent 16px, transparent 28px) 1; /* Custom dash and gap sizes */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width: 900px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .card_collection {
+        border-right: none; 
+        padding: 10% 2%; 
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        padding: 1rem 0; 
+        border: none;
+    }
+
+    #logo, #spectrum, #collections {
+        border-left: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    #spectrum>a, #collections>a, #logo>a {
+        padding: 2%;
+    }
+}
